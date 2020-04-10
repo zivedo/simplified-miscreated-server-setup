@@ -582,7 +582,7 @@ if /I "%ENABLEUPNP%"=="y" call :setupnp
 
 echo Would you like to validate or update the server files? 'Y' recommended.
 echo   ^( auto-validation will commence in 10 seconds ^)
-CHOICE /d Y /T 10 /M "Validate and/or update the server?"
+CHOICE /c YN /d Y /T 10 /M "Validate and/or update the server?"
 IF !ERRORLEVEL! EQU 1 call :validateserver
 
 call :cleanmods
